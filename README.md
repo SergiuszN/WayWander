@@ -9,7 +9,7 @@ and installed docker with docker-compose, then just run:
 
 ```bash
 $ make up
-$ make compile
+$ make install
 ```
 
 Or alternatively if you for some reason do not have 
