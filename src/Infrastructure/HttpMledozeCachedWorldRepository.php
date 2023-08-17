@@ -12,9 +12,8 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 class HttpMledozeCachedWorldRepository extends HttpMledozeWorldRepository implements WorldRepositoryInterface
 {
     public function __construct(
-        protected HttpClientInterface   $httpClient,
+        protected HttpClientInterface $httpClient,
         private readonly CacheInterface $cache,
-
     ) {
         parent::__construct($httpClient);
     }

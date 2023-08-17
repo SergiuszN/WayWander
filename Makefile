@@ -26,3 +26,9 @@ test: ## Run tests
 	@$(EXEC_CONT) "\
 			php bin/phpunit; \
 		"
+
+check: ## Run code quality checks
+	@$(EXEC_CONT) "\
+    			vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix; \
+    			vendor/bin/deptrac analyse --config-file=deptrac.yaml; \
+    		"

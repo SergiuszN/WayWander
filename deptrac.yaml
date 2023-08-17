@@ -1,0 +1,31 @@
+parameters:
+    paths:
+        - ./src
+    exclude_files:
+        - '#.*test.*#'
+    layers:
+        - name: Symfony
+          collectors:
+              - type: className
+                value: .*Symfony\\.*
+        - name: Application
+          collectors:
+              - type: className
+                value: .*App\\Application\\.*
+        - name: Domain
+          collectors:
+            - type: className
+              value: .*App\\Domain\\.*
+        - name: Infrastructure
+          collectors:
+            - type: className
+              value: .*App\\Infrastructure\\.*
+    ruleset:
+        Application:
+            - Symfony
+            - Domain
+        Domain:
+        Infrastructure:
+            - Symfony
+            - Domain
+    skip_violations:

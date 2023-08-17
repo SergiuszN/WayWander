@@ -38,3 +38,12 @@ $ docker-compose exec php bash
 $ php bin/phpunit
 ```
 
+## Some CI/CD pre configs 
+
+In project added php-cs-fixer and deptrac that can easily be 
+configured with some pipes for basic code quality checks commit-to-commit, 
+for running check locally just type: 
+
+```bash 
+$ make check
+```

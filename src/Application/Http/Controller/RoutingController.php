@@ -12,8 +12,7 @@ class RoutingController
 {
     public function __construct(
         public readonly WorldNavigator $worldNavigator
-    )
-    {
+    ) {
     }
 
     #[Route('/{origin}/{destination}', name: 'routing_navigate')]

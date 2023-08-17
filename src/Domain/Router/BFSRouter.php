@@ -49,7 +49,10 @@ class BFSRouter implements RouterInterface
         $road = [];
 
         while ($node) {
-            if (!isset($parents[$node])) break;
+            if (!isset($parents[$node])) {
+                break;
+            }
+
             $step = $parents[$node];
             $road[] = $step;
             $node = $step;
